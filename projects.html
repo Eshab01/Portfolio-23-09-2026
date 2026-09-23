@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Reports — Eshab Sachan</title>
+<meta name="description" content="17 projects by Eshab Sachan — full-stack apps, tools, creative experiments, and Web3 builds.">
+<meta name="theme-color" content="#0b0a10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230b0a10'/%3E%3Cpath d='M20 6 L31 15 L27 33 L20 37 L13 33 L9 15 Z' fill='none' stroke='%23ffc857' stroke-width='2'/%3E%3Ctext x='20' y='25' font-family='Georgia,serif' font-size='14' fill='%23ffc857' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="projects">
+
+<div id="icon-sprite-root"></div>
+<div class="page-transition" id="pageTransition"></div>
+<div id="nav-root"></div>
+
+<main id="top">
+  <!-- ============ BREACH — page entrance ============ -->
+  <section class="breach" id="breach" style="min-height:78vh;">
+    <div class="breach__stonework"></div>
+    <div class="breach__glow"></div>
+    <svg class="breach__crack" viewBox="0 0 1200 500" preserveAspectRatio="none">
+      <path d="M600 0 L560 90 L640 140 L520 220 L610 270 L470 360 L580 420 L500 500" />
+      <path d="M600 0 L520 60 L400 40" />
+      <path d="M640 140 L760 100 L860 150" />
+      <path d="M520 220 L380 250 L300 210" />
+      <path d="M610 270 L740 300 L820 260" />
+      <path d="M470 360 L330 380" />
+    </svg>
+    <div class="breach__boulder" id="boulder"></div>
+    <div class="breach__content">
+      <span class="breach__eyebrow">CH. 04 — THE WALL GIVES WAY</span>
+      <h1 class="breach__title">Field Reports</h1>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <p class="section__intro reveal" style="max-width:640px;">Seventeen builds — a mix of full-stack apps, quick utilities, and after-hours experiments. Filter by kind, or click any card for the full report.</p>
+
+      <div class="projects__filters reveal" id="filters" style="margin-top:2rem;">
+        <button class="filter-btn is-active" data-filter="all">All (17)</button>
+        <button class="filter-btn" data-filter="web">Full-Stack &amp; Web</button>
+        <button class="filter-btn" data-filter="tools">Tools &amp; Utilities</button>
+        <button class="filter-btn" data-filter="creative">Creative &amp; Games</button>
+        <button class="filter-btn" data-filter="web3">Web3</button>
+      </div>
+
+      <div class="projects__grid" id="projectsGrid"></div>
+
+      <div class="projects__more reveal">
+        <a href="https://github.com/Eshab01" target="_blank" rel="noopener" class="btn btn--secondary">
+          See the rest on GitHub
+          <svg width="14" height="14"><use href="#i-arrow-up-right"/></svg>
+        </a>
+      </div>
+
+      <div class="reveal" style="margin-top:3rem; text-align:center;">
+        <a href="venture.html" class="btn btn--primary">Next: The Venture <svg width="16" height="16" style="margin-left:.3rem;"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PROJECT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalClose" aria-label="Close"><svg width="16" height="16"><use href="#i-x"/></svg></button>
+    <span class="modal__num" id="modalNum"></span>
+    <h2 class="modal__title" id="modalTitle"></h2>
+    <p class="modal__desc" id="modalDetail"></p>
+    <div class="modal__section-title">STACK</div>
+    <div class="modal__stack" id="modalStack"></div>
+    <a href="#" id="modalLive" class="project-card__link" style="display:none;" target="_blank" rel="noopener">Visit live <svg width="14" height="14"><use href="#i-arrow-up-right"/></svg></a>
+  </div>
+</div>
+
+<div id="footer-root"></div>
+
+<script src="assets/libs/anime.min.js"></script>
+<script src="js/partials.js"></script>
+<script src="js/core.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/projects-data.js"></script>
+<script src="js/page-projects.js"></script>
+</body>
+</html>

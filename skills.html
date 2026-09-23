@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Arsenal — Eshab Sachan</title>
+<meta name="description" content="Every language, framework, and tool Eshab Sachan currently uses, mapped as an interactive skill tree.">
+<meta name="theme-color" content="#0b0a10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230b0a10'/%3E%3Cpath d='M20 6 L31 15 L27 33 L20 37 L13 33 L9 15 Z' fill='none' stroke='%23ffc857' stroke-width='2'/%3E%3Ctext x='20' y='25' font-family='Georgia,serif' font-size='14' fill='%23ffc857' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="skills">
+
+<div id="icon-sprite-root"></div>
+<div class="page-transition" id="pageTransition"></div>
+<div id="nav-root"></div>
+
+<main id="top">
+  <section class="masthead">
+    <canvas class="masthead__canvas" id="ember-canvas" aria-hidden="true"></canvas>
+    <div class="masthead__vignette"></div>
+    <div class="container">
+      <span class="masthead__eyebrow">CH. 02 — THE ARSENAL</span>
+      <h1 class="masthead__title">Equipment<br>Loadout</h1>
+      <p class="masthead__intro">Six categories, one core. Click through the tree, or scroll for the full breakdown.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="skilltree reveal">
+        <svg class="skilltree__svg" id="skillTreeSvg" viewBox="0 0 480 480"></svg>
+        <div class="skilltree__detail" id="skillDetail">
+          <div class="skilltree__detail-eyebrow">SELECT A NODE</div>
+          <div class="skilltree__detail-title">Tap any category</div>
+          <div class="tag-cloud" id="skillDetailTags">
+            <span class="tag">Click a node on the tree to see what's inside</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-glow"></div>
+
+  <section class="section" id="fullbreakdown">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="eyebrow">THE FULL BREAKDOWN</span>
+        <h2 class="section__title">Everything, unfiltered</h2>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill-card reveal skill-card--code" id="cat-languages">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-code"/></svg><span class="skill-card__title">Languages</span></div>
+          <div class="tag-cloud">
+            <span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">SQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Kotlin (learning)</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" id="cat-frontend">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-layout"/></svg><span class="skill-card__title">Frontend</span></div>
+          <div class="tag-cloud">
+            <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">shadcn/ui</span><span class="tag">Responsive UI</span>
+          </div>
+        </div>
+        <div class="skill-card reveal skill-card--code" id="cat-backend">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-server"/></svg><span class="skill-card__title">Backend &amp; Database</span></div>
+          <div class="tag-cloud">
+            <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">Normalization</span><span class="tag">ACID</span><span class="tag">B/B+ Trees</span><span class="tag">Hashing</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" id="cat-tools">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-tool"/></svg><span class="skill-card__title">Tools</span></div>
+          <div class="tag-cloud">
+            <span class="tag">Git / GitHub</span><span class="tag">GitHub Desktop</span><span class="tag">Git Bash</span><span class="tag">VS Code</span><span class="tag">Visual Studio</span><span class="tag">npm / npx</span><span class="tag">Vercel</span><span class="tag">Canva</span><span class="tag">Adobe Animate</span><span class="tag">Photoshop</span>
+          </div>
+        </div>
+        <div class="skill-card reveal skill-card--code" id="cat-ai">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-cpu"/></svg><span class="skill-card__title">AI &amp; Automation</span></div>
+          <div class="tag-cloud">
+            <span class="tag">AI-Assisted Dev</span><span class="tag">Debugging</span><span class="tag">Local LLMs</span><span class="tag">Llama.cpp</span><span class="tag">Mistral / GGUF</span><span class="tag">Workflow Automation</span><span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" id="cat-web3">
+          <div class="skill-card__head"><svg class="skill-card__icon"><use href="#i-link"/></svg><span class="skill-card__title">Web3 / Blockchain</span></div>
+          <div class="tag-cloud">
+            <span class="tag">Solana</span><span class="tag">web3.js</span><span class="tag">@solana/spl-token</span><span class="tag">SPL Token</span><span class="tag">Phantom</span><span class="tag">Solflare</span><span class="tag">Wallet Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:3rem; text-align:center;">
+        <a href="experience.html" class="btn btn--primary">Next: Campaign Log <svg width="16" height="16" style="margin-left:.3rem;"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+
+<script src="assets/libs/anime.min.js"></script>
+<script src="js/partials.js"></script>
+<script src="js/core.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/page-skills.js"></script>
+</body>
+</html>
